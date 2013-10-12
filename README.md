@@ -5,3 +5,4 @@ expro-future-test
 
 - [泛商汇Service平台](https://github.com/extensivepro/expro-future/tree/develop/service)
 - [泛商汇POS](https://github.com/extensivepro/expropos)
+  - [FAQ](expropos/faq.md)
