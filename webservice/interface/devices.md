@@ -51,7 +51,7 @@
 
 #### `400` - 参数错误
 * `udid` - `is required`
-  - `is duplication`
+  - `is duplicated`
 * `shop` - `is required`
   - `.id is required`
   - `.merchant.id is required`
