@@ -1,5 +1,5 @@
-# 积分记录：points
-===
+# 积分记录 points
+
 
 ## 添加积分记录
 ## 请求
@@ -16,13 +16,6 @@
     "reason": "consumption reward"
 }
 ```
-
-#### 必要项目
-createdAt
-memberID
-point
-postPoint
-postTotalPoint
 
 #### 备注
 
@@ -42,8 +35,12 @@ postTotalPoint
 ```
 
 ### 400 参数错误 Bad Request
-对所有参数类型的校验，例如：
-`agentID` - `should be string` 代理人ID必须是字符串
+* `createdAt` - `is required`
+* `memberID` - `is required`
+* `point` - `is required`
+* `postPoint` - `is required`
+* `postTotalPoint` - `is required`
+
 
 ### 401 未授权 Unauthorized
 `Unauthorized` - `please login` 未授权，请登录
