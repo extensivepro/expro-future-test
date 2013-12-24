@@ -66,7 +66,8 @@
     "name": "烤鸭店",
     "fullName": "北京烤鸭店"
   },
-  "point": 0,
+  "postPoint": 0,
+  "postTotalPoint": 0,
   "level": "会员",
   "status": "active",
   "sinceAt": 1366444157013,
@@ -127,7 +128,8 @@
     "name": "烤鸭店",
     "fullName": "北京烤鸭店"
   },
-  "point": 0,
+  "postPoint": 0,
+  "postTotalPoint": 0,
   "level": "会员",
   "status": "active",
   "sinceAt": 1366444157013,
@@ -157,7 +159,8 @@
     "name": "烤鸭店",
     "fullName": "北京烤鸭店"
   },
-  "point": 0,
+  "postPoint": 0,
+  "postTotalPoint": 0,
   "level": "会员",
   "status": "active",
   "sinceAt": 1366444157013,
@@ -182,13 +185,16 @@
   "phone": "15154588756",
   "email": "hello@qq.com",
   "idcard": "587452145874569852",
-  "point": 0,
   "level": "会员",
   "status": "active",
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013
 }
 ```
+#### 备注
+`postPoint` - 不可以由外部更新
+`postTotalPoint` - 不可以由外部更新
+
 ## 响应
 ### `200` - 更新成功
 ### `400` - 请求参数错误

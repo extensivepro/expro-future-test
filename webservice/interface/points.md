@@ -10,9 +10,9 @@
     "agentID": "c82e1197884d8806", 
     "createdAt": 1386235335, 
     "memberID": "903d6f6ce857a9eb", 
-    "point": 100, 
-    "postPoint": 2300, 
-    "postTotalPoint": 12300, 
+    "point": 100,
+    "merchantID": "c82e1197884d8806", 
+    "shopID": "903d6f6ce857a9eb",
     "reason": "consumption reward"
 }
 ```
@@ -30,9 +30,33 @@
     "point": 100, 
     "postPoint": 2300, 
     "postTotalPoint": 12300, 
-    "reason": "consumption reward"
+    "merchantID": "c82e1197884d8806", 
+    "shopID": "903d6f6ce857a9eb",
+    "reason": "consumption reward",
+    "member": {
+        "id": "9a0714826e347a64",
+        "name": "曹操",
+        "code": "100001",
+        "email": "caocao@fankahui.com",
+        "phone": "18912345678",
+        "postPoint": 5000,
+        "postTotalPoint": 10000,
+        "level": "会员",
+        "status": "active",
+        "sinceAt": 1371570826,
+        "dueAt": 1403106826,
+        "createdAt": -57261283574,
+        "account": {
+            "id": "e55825da3bd8d8c3",
+            "name": "曹操",
+            "balance": 10000
+        },
+        "registerShopID": "903d6f6ce857a9eb"
+    }		
 }
 ```
+#### 备注
+必须包含 - postPoint, postTotalPoint, member
 
 ### 400 参数错误 Bad Request
 * `createdAt` - `is required`
@@ -75,6 +99,8 @@
     "point": 100, 
     "postPoint": 2300, 
     "postTotalPoint": 12300, 
+    "merchantID": "c82e1197884d8806", 
+    "shopID": "903d6f6ce857a9eb",
     "reason": "consumption reward"
 }]
 ```
@@ -107,6 +133,8 @@
     "point": 100, 
     "postPoint": 2300, 
     "postTotalPoint": 12300, 
+    "merchantID": "c82e1197884d8806", 
+    "shopID": "903d6f6ce857a9eb",
     "reason": "consumption reward"
 }
 ```
