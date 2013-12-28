@@ -13,6 +13,7 @@
 * `fee` - 根据交易金额查询交易；示例：?{"fee":{"$lt":10025}}
 * `skip` - 查询起始位置；示例：?skip=0
 * `limit` - 查询长度；示例：?limit=20
+* `withall` - 查询返回包括device和bill的详细信息；示例：?withall=1
 
 ### 默认项目
 * `skip` - 0
@@ -23,35 +24,66 @@
 ```json
 [
   {
-    "id": "32445a458b45e",
-    "shopID": "87245a458b45e",
-    "serialNumber": 201304231002,
-    "deviceID": "2584a5c4d5e4a4",
-    "billID": "87245a458b347",
-    "quantity": 3,
-    "fee": 3000,
-    "memo": "",
+    "billID": "8d216b34db1628ed",
+    "createdAt": 1387529885,
+    "deviceCode": 1,
+    "deviceID": "3E7C2A07-D5AD-429F-9801-9C941A19655D",
+    "fee": 379000,
     "items": [
       {
-        "dealPrice": 1000,
-        "quantity": 3,
         "item": {
-          "id": "1546a4546b456c4",
-          "name": "老北京鸡肉卷",
-          "price": 1000
-        }
+          "id": "221f47e56134f82c",
+          "name": "iPhone 4S",
+          "price": 379000
+        },
+        "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
+        "dealPrice": 379000,
+        "quantity": 1
       }
     ],
+    "quantity": 1,
     "seller": {
-      "name": "张三",
-      "employeeID": "124ac87da56e"
+      "employeeID": "6d97c241f56a8873",
+      "name": "新业主"
     },
-    "buyer": {
-      "memberID": "12487dc8a56e",
-      "code": "123456789",
-      "name": "李四"
+    "serialNumber": 1000003,
+    "shopID": "2834910281d26a76",
+    "id": "f649a6f4622a0aa6",
+    "bill": {
+      "billNumber": 1000004,
+      "deviceID": "3E7C2A07-D5AD-429F-9801-9C941A19655D",
+      "dealID": "f649a6f4622a0aa6",
+      "dealType": "deal",
+      "amount": 379000,
+      "discountAmount": 0,
+      "cashSettlement": {
+        "status": "closed",
+        "serialNumber": 409222694,
+        "settledAt": "1387529895",
+        "amount": 380000,
+        "payType": "cash"
+      },
+      "createdAt": 1387529892,
+      "agentID": "6d97c241f56a8873",
+      "shopID": "2834910281d26a76",
+      "id": "8d216b34db1628ed"
     },
-    "createdAt": 1366351844618
+    "device": {
+      "code": 1,
+      "createdAt": 1386926594,
+      "shop": {
+        "id": "146e1ae24ff818e8",
+        "merchant": {
+          "id": "e20dccdf039b3874",
+          "owner": {
+            "id": "9f4b394aa96de9d2"
+          }
+        }
+      },
+      "udid": "3E7C2A07-D5AD-429F-9801-9C941A19655D",
+      "updateAt": 1388033986.044,
+      "id": "08da4c99af30c84f"
+    }
   }
 ]
 ```
