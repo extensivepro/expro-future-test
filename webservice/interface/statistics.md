@@ -7,8 +7,8 @@
 #### QueryString
 * `period` - 统计周期单位: `daily`，`weekly`，`monthly`
 * `keyID` - 统计对象ID可以是: `employeID`, `shopID`, `merchantID`
-* `skip` - 查询起始位置；示例：?skip=0
-* `limit` - 查询长度；示例：?limit=20
+* `skip` - 查询起始位置跳过的单位个数，默认是0；示例：?skip=1，查月报的时候表示从上个月的前一个月开始查询
+* `limit` - 查询单位数量的长度，默认是7；示例：?limit=20 返回20个单位的记录
 
 ## 返回
 ### 200 - OK
@@ -91,7 +91,7 @@
 #### 备注
 `id` - 可以忽略
 `value.keyID` - 请求的对象ID
-`value.statAt` - 统计时间段， 月报为年-月，周边为周数自1970，日报为毫秒数自1970
+`value.statAt` - 统计时间单位数量， 全部是距离1970年1月1日以来，数量 月报为月数，周报为周数，日报为天数
 `value.prepay` - 储值金额与次数
 `value.return` - 退货额与次数
 `value.sale` - 销售额与成交次数
