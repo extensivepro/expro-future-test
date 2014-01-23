@@ -5,9 +5,9 @@
 ### GET /statistics
 
 #### QueryString
-* `period` - 统计周期单位: `daily`，`weekly`，`monthly`
-* `keyID` - 统计对象ID可以是: `employeID`, `shopID`, `merchantID`
-* `skip` - 查询起始位置跳过的单位个数，默认是0；示例：?skip=1，查月报的时候表示从上个月的前一个月开始查询
+* `period` - 统计周期单位: `daily`，`weekly`，`monthly`，必须提交项目
+* `keyID` - 统计对象ID可以是: `employeID`, `shopID`, `merchantID`, 必须提交项目
+* `end` - 查询的截止的时间，单位为距离1970年1月1日的天数、周数、月数，必须提交。；示例：?end=16093，查2014-01-23的日报
 * `limit` - 查询单位数量的长度，默认是7；示例：?limit=20 返回20个单位的记录
 
 ## 返回
