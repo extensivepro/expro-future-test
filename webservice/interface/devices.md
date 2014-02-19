@@ -59,3 +59,37 @@
 
 #### `401` - 未登录
 #### `403` - 权限错误
+
+## 设备登记
+将平台中的设备登记到当前用户的账户下的商店中，这样让设备共享账户下的基础信息。
+### 请求
+### POST /device-register
+```json
+{
+  "udid": "FFFF3cac05dd2f8bed64c4d11c6077742bce974c128a",
+  "code": "10002",
+  "name": "总店2号收银台-iPad4"，
+  "originShop": {
+    "manager": {
+      "idcard": "原设备上的店长身份证号",
+      "password": "店长密码"
+    }
+  },
+  "registerShopID": "903d6f6ce857a9eb"
+}
+```
+### 响应
+#### `200` OK
+#### `400` - 参数错误
+* `udid` - `is required`
+  - `is not exist`
+* `originShop` - `is required`
+  - `.manager is required`
+  - `.manager.id is required`
+  - `.manager.password is required`
+* `registerShopID` - `is required`
+  - `is not exist`
+
+#### `401` - 未登录
+#### `403` - 权限错误
+* shopManager - bad shop manager credential
