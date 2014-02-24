@@ -22,3 +22,4 @@
 * [accounts](accounts.md)
 * [add-deal](add-deal.md)
 * [add-return](add-return.md)
+* [inventories](inventories.md)

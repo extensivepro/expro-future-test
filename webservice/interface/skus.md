@@ -14,19 +14,26 @@
     "employeeID": "524a5a458b45e",
     "name": "张三"
   },
-  "createdAt": 1366340211946
+  "sumPrice": 100000,
+  "price": 1000,
+  "createdAt": 1366340211946,
+  "type": "add"
 }
 ```
 ### 必要项目
 * `shopID`
 * `itemID`
-* `quantity` - `正数`
+* `quantity` - 正数
 * `operator` -> `employeeID`
+* `sumPrice` - 总价
+* `price` - 单价
 * `createdAt`
+* `type` - `add`
 
 ### 备注
-* `quantity` - 正数表示进货，负数表示出货
+* `quantity` - 只允许为正
 * `createdAt` - 时间格式一律为整型值的秒数
+* `type` `add` - 进货
 
 ## 响应
 ### `201` - 添加成功(目前：200)
@@ -41,7 +48,10 @@
     "employeeID": "524a5a458b45e",
     "name": "张三"
   },
-  "createdAt": 1366340211046
+  "sumPrice": 100000,
+  "price": 1000,
+  "createdAt": 1366340211046,
+  "type": "add"
 }
 ```
 ### `400` - 请求参数错误
@@ -65,20 +75,30 @@
   "shopID": "87245a458b45e",
   "itemID": "15145a458b45e",
   "name": "老北京鸡肉卷",
-  "quantity": -100,
+  "quantity": 100,
   "operator": {
     "employeeID": "524a5a458b45e",
     "name": "张三"
   },
-  "createdAt": 1366340211946
+  "sumPrice": 100000,
+  "price": 1000,
+  "createdAt": 1366340211946,
+  "type": "sub"
 }
 ```
 ### 必要项目
 * `shopID`
 * `itemID`
-* `quantity` - `负数`
+* `quantity` - `正数`
 * `operator` -> `employeeID`
+* `sumPrice` - 总价
+* `price` - 单价
 * `createdAt`
+* `type` - `sub`
+
+### 备注
+* `type` `sub` - 出货
+
 
 ## 响应
 ### `201` - 添加成功(目前：200)
@@ -88,12 +108,15 @@
   "shopID": "87245a458b45e",
   "itemID": "15145a458b45e",
   "name": "老北京鸡肉卷",
-  "quantity": -100,
+  "quantity": 100,
   "operator": {
     "employeeID": "524a5a458b45e",
     "name": "张三"
   },
-  "createdAt": 1366340211946
+  "sumPrice": 100000,
+  "price": 1000,
+  "createdAt": 1366340211946,
+  "type": "sub"
 }
 ```
 ### `400` - 请求参数错误
@@ -137,7 +160,10 @@
     "employeeID": "524a5a458b45e",
     "name": "张三"
   },
-  "createdAt": 1366340211046
+  "sumPrice": 100000,
+  "price": 1000,
+  "createdAt": 1366340211046,
+  "type": "add"
 }]
 ```
 ### `204` - 无内容(目前：200)
