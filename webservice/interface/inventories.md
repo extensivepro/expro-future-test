@@ -31,16 +31,21 @@
 ```
 ####必要项目
 * `shopID` 指明商店
-* `beginDate`
-* `endDate` - 截至时间 同时也是盘点时间
-* `employeeID`
-* `items`
+* `sinceAt` 起始时间
+* `createdAt` 截至时间 同时也是盘点时间
+* `agent` 盘点人员
+* `agent` -> `name` 盘点人员姓名
+* `agent` -> `id` 盘点人员 id
+* `items` 某商品的盘点记录(inventoryItem)
+* `items` -> `id` 客户端生成的 inventoryItem 的 id
 * `items` -> `inputQuantity` 盘点账期入库数量
 * `items` -> `outputQuantity` 盘点账期出库数量
 * `items` -> `priorQuantity` 上次盘点剩余数量
 * `items` -> `realQuantity` 本次盘点剩余数量
 * `items` -> `memo` 备忘
-* `items` -> `itemID` 对应的商品
+* `items` -> `item` 对应的商品
+* `items` -> `item` ->  `id` 商品 id
+* `items` -> `item` -> `name` 商品名
 
 ###响应
 ####`201` - 添加成功(目前：200)
@@ -65,7 +70,7 @@
 ###请求 GET /inventories
 #### QueryString
 * `shopID` - 锁定商店
-* `endDate` - 锁定盘点
+* `createdAt` - 锁定盘点
 
 ###响应
 ####`200` - 成功返回
