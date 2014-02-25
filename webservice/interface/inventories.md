@@ -7,9 +7,12 @@
 ```json
 {
   "shopID": "87245a458b45e",
-  "beginDate": 1388505600,
-  "endDate": 1391184000,
-  "employeeID": "124ac87da56e",
+  "sinceAt": 1388505600,
+  "createdAt": 1391184000,
+  "agent": {
+    "name": "???",
+    "id": "124ac87da56e"
+  },
   "items": [
     {
       "id": "abcdefg",
@@ -18,7 +21,10 @@
       "priorQuantity": 200,
       "realQuantity": 198,
       "memo": "unknown",
-      "itemID": "1546a4546b456c4"
+      "item": {
+        "id": "1546a4546b456c4",
+        "name": "老北京鸡肉卷"
+      }
     }
   ]
 }
@@ -65,11 +71,14 @@
 ####`200` - 成功返回
 ```json
 {
+  "id": "adasavagqtfvasv",
   "shopID": "87245a458b45e",
-  "beginDate": 1388505600,
-  "endDate": 1391184000,
-  "employeeID": "124ac87da56e",
-  "inventoryID": "adasavagqtfvasv",
+  "sinceAt": 1388505600,
+  "createdAt": 1391184000,
+  "agent": {
+    "name": "???",
+    "id": "124ac87da56e"
+  },
   "items": [
     {
       "id": "abcdefg",
@@ -78,7 +87,10 @@
       "priorQuantity": 200,
       "realQuantity": 198,
       "memo": "unknown",
-      "itemID": "1546a4546b456c4"
+      "item": {
+        "id": "1546a4546b456c4",
+        "name": "老北京鸡肉卷"
+      }
     }
   ]
 }
