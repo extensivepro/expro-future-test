@@ -7,45 +7,34 @@
 ```json
 {
   "shopID": "87245a458b45e",
-  "createdAt": 1391184000,
   "beginDate": 1388505600,
   "endDate": 1391184000,
-  "agent": {
-    "name": "???",
-    "employeeID": "124ac87da56e"
-  },
+  "employeeID": "124ac87da56e",
   "items": [
     {
-      "inQuantity": 0,
-      "outQuantity": 0,
-      "lastQuantity": 200,
+      "id": "abcdefg",
+      "inputQuantity": 0,
+      "outputQuantity": 0,
+      "priorQuantity": 200,
       "realQuantity": 198,
-      "reason": "unknown",
-      "item": [
-        {
-          "id": "1546a4546b456c4",
-          "name": "老北京鸡肉卷",
-          "price": 1000
-        }
-      ]
+      "memo": "unknown",
+      "itemID": "1546a4546b456c4"
     }
   ]
 }
 ```
 ####必要项目
 * `shopID` 指明商店
-* `createdAt`
 * `beginDate`
-* `endDate`
-* `agent`
-* `agent` -> `employeeID`
+* `endDate` - 截至时间 同时也是盘点时间
+* `employeeID`
 * `items`
-* `items` -> `inQuantity` 盘点账期入库数量
-* `items` -> `outQuantity` 盘点账期出库数量
-* `items` -> `lastQuantity` 上次盘点剩余数量
+* `items` -> `inputQuantity` 盘点账期入库数量
+* `items` -> `outputQuantity` 盘点账期出库数量
+* `items` -> `priorQuantity` 上次盘点剩余数量
 * `items` -> `realQuantity` 本次盘点剩余数量
-* `items` -> `reason` 偏差原因
-* `items` -> `item` -> `id` 对应的商品
+* `items` -> `memo` 备忘
+* `items` -> `itemID` 对应的商品
 
 ###响应
 ####`201` - 添加成功(目前：200)
@@ -57,8 +46,9 @@
 ```
 
 #### `400` - 请求参数错误
-* `itemID` - 查找不到item
-* `shopID` - 查找不到shop
+* `itemID` - 查找不到 item
+* `shopID` - 查找不到 shop
+* `employeeID` - 查找不到 employee
 
 #### `401` - 权限不够
 * 非`cashier`或`owner`雇员
@@ -67,35 +57,28 @@
 
 ##雇员查询盘点
 ###请求 GET /inventories
+#### QueryString
 * `shopID` - 锁定商店
-* `createdAt` - 锁定盘点
+* `endDate` - 锁定盘点
 
 ###响应
 ####`200` - 成功返回
 ```json
 {
   "shopID": "87245a458b45e",
-  "createdAt": 1391184000,
   "beginDate": 1388505600,
   "endDate": 1391184000,
-  "agent": {
-    "name": "???",
-    "employeeID": "124ac87da56e"
-  },
+  "employeeID": "124ac87da56e",
+  "inventoryID": "adasavagqtfvasv",
   "items": [
     {
-      "inQuantity": 0,
-      "outQuantity": 0,
-      "lastQuantity": 200,
+      "id": "abcdefg",
+      "inputQuantity": 0,
+      "outputQuantity": 0,
+      "priorQuantity": 200,
       "realQuantity": 198,
-      "reason": "unknown",
-      "item": [
-        {
-          "id": "1546a4546b456c4",
-          "name": "老北京鸡肉卷",
-          "price": 1000
-        }
-      ]
+      "memo": "unknown",
+      "itemID": "1546a4546b456c4"
     }
   ]
 }
