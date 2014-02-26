@@ -42,7 +42,6 @@
 * `items` -> `outputQuantity` 盘点账期出库数量
 * `items` -> `priorQuantity` 上次盘点剩余数量
 * `items` -> `realQuantity` 本次盘点剩余数量
-* `items` -> `memo` 备忘
 * `items` -> `item` 对应的商品
 * `items` -> `item` ->  `id` 商品 id
 * `items` -> `item` -> `name` 商品名
@@ -52,14 +51,29 @@
 ```json
 {
   "message": "success",
-  "inventoryID": "adasavagqtfvasv"
+  "id": "adasavagqtfvasv"
 }
 ```
 
 #### `400` - 请求参数错误
-* `itemID` - 查找不到 item
-* `shopID` - 查找不到 shop
-* `employeeID` - 查找不到 employee
+* `shopID is required`
+* `sinceAt is required`
+* `createdAt is required`
+* `agent`
+    * `is required`
+    * `.name is required`
+    * `.id is required`
+* `items`
+    * `is required`
+    * `.id is required`
+    * `.id is duplicated`
+    * `.inputQuantity is required`
+    * `.outputQuantity is required`
+    * `.priorQuantity is required`
+    * `.realQuantity is required`
+    * `.item is required`
+    * `.item.id is required`
+    * `.item.name is required`
 
 #### `401` - 权限不够
 * 非`cashier`或`owner`雇员
