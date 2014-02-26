@@ -50,7 +50,6 @@
 ####`201` - 添加成功(目前：200)
 ```json
 {
-  "message": "success",
   "id": "adasavagqtfvasv"
 }
 ```
