@@ -6,19 +6,10 @@
 
 #### QueryString
 * `period` - 统计周期单位: `daily`，`weekly`，`monthly`，必须提交项目
-* `keyID` - 统计对象ID可以是: `employeID`, `shopID`, `merchantID`, 必须提交项目。keyID可以是shopID数组、agentID数组、merchantID数组。
+* `keyID` - 统计对象ID可以是: `employeID`, `shopID`, `merchantID`, 必须提交项目。keyID可以是shopID数组、agentID数组、merchantID数组（ angular里keyID数组在querystring中的呈现形式：keyID=6d97c241f56a8873&keyID=e20dccdf039b3874）。
 * `end` - 查询的截止的时间，单位为距离1970年1月1日的天数、周数、月数，必须提交。；示例：?end=16093，查2014-01-23的日报
 * `limit` - 查询单位数量的长度，默认是7；示例：?limit=20 返回20个单位的记录
 
-当keyID为数组querystring例子
-
-```
- period=daily&
- keyID=6d97c241f56a8873&keyID=e20dccdf039b3874&
- end=16066&
- limit=7
- 
-```
 
 
 ## 返回
@@ -101,52 +92,12 @@
 
 #### 周销售
 ```json
-[
-  {
-    "value": {
-      "sale": {
-        "total": 12765,
-        "count": 14
-      },
-      "return": {
-        "total": 0,
-        "count": 0
-      },
-      "prepay": {
-        "total": 0,
-        "count": 0
-      },
-      "keyID": "6d97c241f56a8873",
-      "statAt": "2297"
-    },
-    "id": "6d97c241f56a8873#2297"
-  }
-]
+参照月销售
 ```
 
 #### 日销售
 ```json
-[
-  {
-    "value": {
-      "sale": {
-        "total": 11925,
-        "count": 12
-      },
-      "return": {
-        "total": 0,
-        "count": 0
-      },
-      "prepay": {
-        "total": 0,
-        "count": 0
-      },
-      "keyID": "6d97c241f56a8873",
-      "statAt": "1389628800000"
-    },
-    "id": "6d97c241f56a8873#1389628800000"
-  }
-]
+参照月销售
 ```
 
 #### 备注
