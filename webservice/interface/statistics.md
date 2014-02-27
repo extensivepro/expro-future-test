@@ -5,7 +5,7 @@
 ### GET /statistics
 
 #### QueryString
-* `tagert` - 统计标的：`bills`销售金额（含储值，默认项目）, `deals`销售数量, `returns`退货数量, `skus`出入库。选填项目
+* `taget` - 统计标的：`bills`销售金额（含储值，默认项目）, `deals`销售数量, `returns`退货数量, `skus`出入库。选填项目
 * `period` - 统计周期单位: `daily`，`weekly`，`monthly`，必须提交项目
 * `keyID` - 统计对象ID可以是: `employeID`, `shopID`, `merchantID`, `itemID`, 必须提交项目。keyID可以是shopID数组、agentID数组、merchantID数组（ angular里keyID数组在querystring中的呈现形式：keyID=6d97c241f56a8873&keyID=e20dccdf039b3874）。
 * `end` - 查询的截止的时间，单位为距离1970年1月1日的天数、周数、月数，必须提交。；示例：?end=16093，查2014-01-23的日报
