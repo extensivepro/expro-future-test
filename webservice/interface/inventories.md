@@ -38,10 +38,6 @@
 * `agent` -> `id` 盘点人员 id
 * `items` 某商品的盘点记录(inventoryItem)
 * `items` -> `id` 客户端生成的 inventoryItem 的 id
-* `items` -> `inputQuantity` 盘点账期入库数量
-* `items` -> `outputQuantity` 盘点账期出库数量
-* `items` -> `priorQuantity` 上次盘点剩余数量
-* `items` -> `realQuantity` 本次盘点剩余数量
 * `items` -> `item` 对应的商品
 * `items` -> `item` ->  `id` 商品 id
 * `items` -> `item` -> `name` 商品名
