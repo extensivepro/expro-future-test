@@ -29,6 +29,9 @@
     }
   },
   "memo": "",
+	"agentID": "45647478a464d45",
+	"shopID": "45647478a464d45",
+	"merchantID": "45647478a464d45",
   "createdAt": 1366351844618
 }
 ```
@@ -42,8 +45,11 @@
 * `createdAt`
 
 ### 备注
-* `dealType` - `deal`或`return`或`prepay`
-* `dealType`为`prepay`时，dealID可以为空
+* `dealType` 
+	* `deal` - 销售
+	* `return` - 退货
+	* `prepay` - 充值，dealID为空
+	* `writedown` - 减记储值，dealID为空
 * `amount` - 以分为单位
 * `discountAmount` - 以分为单位，不能为负值
 * 如果`amount`=`discountAmount`，`cashSettlement`与`memberSettlement`可以均为空
@@ -52,6 +58,9 @@
 * `status` - `closed`或`unpaid`(`cashSettlement`的`status`由客户端上传，`memberSettlement`的`status`由服务端设置)
 * `memberSettlement`中，`deal` -> `payerAccount`扣款，`return` -> `payeeAccount`充值，两者必仅有其一
 * `createdAt` - 时间格式一律为整型值的秒数
+* `merchantID` - 商户的ID
+* `shopID` - 商店的ID
+* `agentID` - 经手人ID
 
 ## 响应
 ### `201` - 添加成功(目前：200)
@@ -81,6 +90,9 @@
     }
   },
   "memo": "",
+	"agentID": "45647478a464d45",
+	"shopID": "45647478a464d45",
+	"merchantID": "45647478a464d45",
   "createdAt": 1366351844618
 }
 ```
@@ -93,7 +105,7 @@
 ### `409` - 请求冲突(目前：400)
 ***
 
-## 雇员查询结算账单
+## 查询结算账单
 ## 请求
 ### GET /bills
 
