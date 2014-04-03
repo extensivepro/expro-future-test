@@ -52,9 +52,12 @@
 	* `writedown` - 减记储值，dealID为空
 * `amount` - 以分为单位
 * `discountAmount` - 以分为单位，不能为负值
-* 如果`amount`=`discountAmount`，`cashSettlement`与`memberSettlement`可以均为空
+* 如果`amount`==`discountAmount`，`cashSettlement`与`memberSettlement`可以均为空
 * `cashSettlement`与`memberSettlement`如果存在，则数据必须完备
-* `payType` - `cashSettlement` -> `cash`；`memberSettlement` -> `prepay`
+* `cashSettlement` - 现金结算
+  * `payType` - `cash` 现金
+* `memberSettlement` - 会员账户结算
+  * `payType` -`prepay` 会员储值
 * `status` - `closed`或`unpaid`(`cashSettlement`的`status`由客户端上传，`memberSettlement`的`status`由服务端设置)
 * `memberSettlement`中，`deal` -> `payerAccount`扣款，`return` -> `payeeAccount`充值，两者必仅有其一
 * `createdAt` - 时间格式一律为整型值的秒数
