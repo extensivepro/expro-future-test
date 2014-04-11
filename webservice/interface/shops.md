@@ -12,6 +12,20 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
+  "openResources": [
+    {
+      "name": "桌子",
+      "type": "table",
+      "serviceability": 1,
+      "code": "16",
+      "codename": "桌号"
+    }
+  ],
+  "location": {
+    "latitude": 23.137466,
+    "longitude": 113.352425,
+    "precision": 119.38504
+  },
   "createdAt": 1364967296480
 }
 ```
@@ -38,6 +52,20 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
+  "openResources": [
+    {
+      "name": "桌子",
+      "type": "table",
+      "serviceability": 1,
+      "code": "16",
+      "codename": "桌号"
+    }
+  ],
+  "location": {
+    "latitude": 23.137466,
+    "longitude": 113.352425,
+    "precision": 119.38504
+  },
   "createdAt": 1364967296480,
   "closedAt":
 }
@@ -74,6 +102,20 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
+  "openResources": [
+    {
+      "name": "桌子",
+      "type": "table",
+      "serviceability": 1,
+      "code": "16",
+      "codename": "桌号"
+    }
+  ],
+  "location": {
+    "latitude": 23.137466,
+    "longitude": 113.352425,
+    "precision": 119.38504
+  },
   "createdAt": 1364967296480,
   "closedAt": 
 }]
@@ -94,6 +136,20 @@
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
   "status": "open",
+  "openResources": [
+    {
+      "name": "桌子",
+      "type": "table",
+      "serviceability": 1,
+      "code": "16",
+      "codename": "桌号"
+    }
+  ],
+  "location": {
+    "latitude": 23.137466,
+    "longitude": 113.352425,
+    "precision": 119.38504
+  }
 }
 ```
 ## 备注
