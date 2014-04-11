@@ -12,7 +12,7 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "openResources": [
+  "openRes": [
     {
       "name": "桌子",
       "type": "table",
@@ -52,7 +52,7 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "openResources": [
+  "openRes": [
     {
       "name": "桌子",
       "type": "table",
@@ -102,7 +102,7 @@
   "telephone": "02544444444",
   "merchantID": "154d4534a48e475",
   "status": "open",
-  "openResources": [
+  "openRes": [
     {
       "name": "桌子",
       "type": "table",
@@ -136,7 +136,7 @@
   "address": "江宁区胜太路44号",
   "telephone": "02544444444",
   "status": "open",
-  "openResources": [
+  "openRes": [
     {
       "name": "桌子",
       "type": "table",
