@@ -34,8 +34,7 @@ deliver|外送
       "message": "提交了订单，不要加辣椒"
     }
   ],
-  "type": "booking"
-  "fee": 1600,
+  "type": "booking",
   "items": [
     {
       "item": {
@@ -48,13 +47,11 @@ deliver|外送
       "quantity": 1
     }
   ],
-  "quantity": 1,
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
     "address": "江宁区胜太路68号408"
   },
-  “address”: ""
   "agent": {
     "id": "6d97c241f56a8873",
     "name": "泛盈微信订餐"
@@ -83,7 +80,7 @@ deliver|外送
       "message": "提交了订单，不要加辣椒"
     }
   ],
-  "type": "booking"
+  "type": "booking",
   "fee": 1600,
   "items": [
     {
@@ -146,7 +143,7 @@ deliver|外送
       "message": "提交了订单，不要加辣椒"
     }
   ],
-  "type": "booking"
+  "type": "booking",
   "fee": 1600,
   "items": [
     {
@@ -233,7 +230,7 @@ deliver|外送
       "message": ""
     }
   ],
-  "type": "booking"
+  "type": "booking",
   "fee": 1600,
   "items": [
     {
