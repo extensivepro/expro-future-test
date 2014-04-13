@@ -22,18 +22,15 @@ deliver|外送
 ## 提交订单
 ### 请求
 ### POST /orders
-
-
-### 响应
-#### 200 - 成功
 ```json
 {
   "createdAt": 1387529885,
-  "status": "accepted",
+  "updateAt": 1387529885,
+  "status": "placed",
   "memo": [
     {
       "name": "顾客张三",
-      "logAt": 1387529885,
+      "createdAt": 1387529885,
       "message": "提交了订单，不要加辣椒"
     }
   ],
@@ -52,9 +49,63 @@ deliver|外送
     }
   ],
   "quantity": 1,
+  "customer": {
+    "id": "6d97c241f56a8873",
+    "name": "顾客张三",
+    "address": "江宁区胜太路68号408"
+  },
+  “address”: ""
   "agent": {
     "id": "6d97c241f56a8873",
-    "name": "新业主"
+    "name": "泛盈微信订餐"
+  },
+  "shop": {
+    "id": "2834910281d26a76",
+    "name": "泛盈总店",
+    "address": "胜太路68号3层",
+    "phone": "025-58679066"
+  }
+}
+```
+
+### 响应
+#### 200 - 成功
+```json
+{
+  "id": "2834910281d26a76",
+  "createdAt": 1387529885,
+  "updateAt": 1387529885,
+  "status": "placed",
+  "memo": [
+    {
+      "name": "顾客张三",
+      "createdAt": 1387529885,
+      "message": "提交了订单，不要加辣椒"
+    }
+  ],
+  "type": "booking"
+  "fee": 1600,
+  "items": [
+    {
+      "item": {
+        "id": "221f47e56134f82c",
+        "name": "盖浇饭",
+        "price": 1600
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
+      "dealPrice": 1600,
+      "quantity": 1
+    }
+  ],
+  "quantity": 1,
+  "customer": {
+    "id": "6d97c241f56a8873",
+    "name": "顾客张三",
+    "address": "江宁区胜太路68号408"
+  },
+  "agent": {
+    "id": "6d97c241f56a8873",
+    "name": "泛盈微信订餐"
   },
   "shop": {
     "id": "2834910281d26a76",
@@ -65,8 +116,8 @@ deliver|外送
 }
 ```
 ##### 备注
-status - 订单状态
-type - 订单类型
+`status` - 订单状态
+`type` - 订单类型
 
 #### 400 - 参数错误
 #### 401 - 未登录
@@ -82,6 +133,138 @@ type - 订单类型
 
 ### 响应
 #### 200 - 成功
+```json
+{
+  "id": "2834910281d26a76",
+  "createdAt": 1387529885,
+  "updateAt": 1387529885,
+  "status": "placed",
+  "memo": [
+    {
+      "name": "顾客张三",
+      "createdAt": 1387529885,
+      "message": "提交了订单，不要加辣椒"
+    }
+  ],
+  "type": "booking"
+  "fee": 1600,
+  "items": [
+    {
+      "item": {
+        "id": "221f47e56134f82c",
+        "name": "盖浇饭",
+        "price": 1600
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
+      "dealPrice": 1600,
+      "quantity": 1
+    }
+  ],
+  "quantity": 1,
+  "customer": {
+    "id": "6d97c241f56a8873",
+    "name": "顾客张三",
+    "address": "江宁区胜太路68号408"
+  },
+  "agent": {
+    "id": "6d97c241f56a8873",
+    "name": "泛盈微信订餐"
+  },
+  "shop": {
+    "id": "2834910281d26a76",
+    "name": "泛盈总店",
+    "address": "胜太路68号3层",
+    "phone": "025-58679066"
+  }
+}
+```
+
+#### 400 - 参数错误
+#### 401 - 未登录
+#### 403 - 权限错误
+
+## 更新订单
+### 请求
+### PUT /orders/:id
+```json
+{
+  "status": "accepted",
+  "memo": [
+    {
+      "name": "顾客张三",
+      "createdAt": 1387529885,
+      "message": "提交了订单，不要加辣椒"
+    }
+  ],
+  "fee": 1600,
+  "quantity": 1,
+  "items": [
+    {
+      "item": {
+        "id": "221f47e56134f82c",
+        "name": "盖浇饭",
+        "price": 1600
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
+      "dealPrice": 1600,
+      "quantity": 1
+    }
+  ]
+}
+```
+
+### 响应
+#### 200 - 成功
+```json
+{
+  "id": "2834910281d26a76",
+  "createdAt": 1387529885,
+  "updateAt": 1387529885,
+  "status": "accepted",
+  "memo": [
+    {
+      "name": "顾客张三",
+      "createdAt": 1387529885,
+      "message": "提交了订单，不要加辣椒"
+    },
+    {
+      "name": "泛盈总店",
+      "createdAt": 1387529885,
+      "message": ""
+    }
+  ],
+  "type": "booking"
+  "fee": 1600,
+  "items": [
+    {
+      "item": {
+        "id": "221f47e56134f82c",
+        "name": "盖浇饭",
+        "price": 1600
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
+      "dealPrice": 1600,
+      "quantity": 1
+    }
+  ],
+  "quantity": 1,
+  "customer": {
+    "id": "6d97c241f56a8873",
+    "name": "顾客张三",
+    "address": "江宁区胜太路68号408"
+  },
+  "agent": {
+    "id": "6d97c241f56a8873",
+    "name": "泛盈微信订餐"
+  },
+  "shop": {
+    "id": "2834910281d26a76",
+    "name": "泛盈总店",
+    "address": "胜太路68号3层",
+    "phone": "025-58679066"
+  }
+}
+```
 
 #### 400 - 参数错误
 #### 401 - 未登录
