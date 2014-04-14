@@ -45,6 +45,8 @@
   "name": "老北京鸡肉卷",
   "desc": "源自于老北京的经典美食",
   "price": 500,
+  "tags": [],
+  "images": [],
   "status": "sale",
   "createdAt": 1365408771288
 }
