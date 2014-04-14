@@ -6,11 +6,9 @@
 
 订单状态|顾客||门店
 :-|:-:|:-:|-:
-placed|预订|---->|
-takeout|外卖|--->|
+placed|下单|---->|
 accepted||<----|接受
 rejected||<----|拒绝
-checkin|签到|---->|
 executed||<----|履行
 canceled|取消|---->|
 
