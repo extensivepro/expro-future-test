@@ -34,7 +34,7 @@
 * `createdAt`
 
 ### 默认项目
-* `status` - `active`。(共三种状态：`active`, `suspend`, `expired`)
+* `status` - `active`。(共4种状态：`active`, `suspend`, `expired`, `removed`)
 * `level` - `"会员"`
 
 ### 备注

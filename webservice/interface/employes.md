@@ -30,7 +30,7 @@
 * `createdAt`
 
 ### 备注
-* `status` - 默认值为`active` (共3种状态`active`, `leave`, `suspend`)
+* `status` - 默认值为`active` (共4种状态`active`, `leave`, `suspend`, `removed`)
 * `role` - 允许值为：`owner`, `cashier`
 
 ## 响应
