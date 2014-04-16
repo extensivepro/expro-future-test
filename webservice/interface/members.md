@@ -27,6 +27,7 @@
 ### 必要项目
 * `code`
 * `name`
+
 ~~* `phone` 或 `email` 两者至少有其一~~
 * `merchant` -> `merchantID`
 * `sinceAt`
