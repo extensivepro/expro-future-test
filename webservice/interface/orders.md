@@ -93,6 +93,7 @@ deliver|外送
     }
   ],
   "quantity": 1,
+  "sequenceNumber": 1,
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
@@ -156,6 +157,7 @@ deliver|外送
     }
   ],
   "quantity": 1,
+  "sequenceNumber": 1,
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
@@ -191,8 +193,6 @@ deliver|外送
       "message": "提交了订单，不要加辣椒"
     }
   ],
-  "fee": 1600,
-  "quantity": 1,
   "items": [
     {
       "item": {
@@ -243,6 +243,7 @@ deliver|外送
     }
   ],
   "quantity": 1,
+  "sequenceNumber": 1,
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
