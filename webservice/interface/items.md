@@ -24,7 +24,7 @@
 * `createdAt`
 
 ### 默认项目
-* `status` - `"sale"`(有2种状态：`"sale"`，`"desale"`)
+* `status` - `"sale"`(有3种状态：`"sale"`，`"desale"`, `"remove"`)
 * `商品`对所有商店开放
 
 ### 备注
