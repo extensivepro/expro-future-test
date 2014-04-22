@@ -12,6 +12,13 @@
   "phone": "15154588756",
   "email": "hello@qq.com",
   "idcard": "587452145874569852",
+  "deliveryAddress": [
+    {
+      "address": "新街口2号",
+      "recipient": "李四",
+      "phone": "18912345678"
+    }
+  ],
   "userID": "2512a52c535e51",
   "shop": {
     "shopID": "251235a2c535e51"
