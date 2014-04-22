@@ -55,6 +55,7 @@
   "phone": "15154588756",
   "email": "hello@qq.com",
   "idcard": "587452145874569852",
+  "deliveryAddress": [],
   "userID": "2512a52c535e51",
   "shop": {
     "shopID": "251235a2c535e51",
@@ -117,6 +118,7 @@
   "phone": "15154588756",
   "email": "hello@qq.com",
   "idcard": "587452145874569852",
+  "deliveryAddress": [],
   "userID": "2512a52c535e51",
   "shop": {
     "shopID": "251235a2c535e51",
@@ -148,6 +150,7 @@
   "phone": "15154588756",
   "email": "hello@qq.com",
   "idcard": "587452145874569852",
+  "deliveryAddress": [],
   "userID": "2512a52c535e51",
   "shop": {
     "shopID": "251235a2c535e51",
