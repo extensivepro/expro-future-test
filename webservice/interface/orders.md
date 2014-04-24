@@ -52,6 +52,7 @@ deliver|外送
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
+    "phone": "13912345678",
     "address": "江宁区胜太路68号408"
   },
   "agent": {
