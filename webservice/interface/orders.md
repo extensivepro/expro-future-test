@@ -52,7 +52,22 @@ deliver|外送
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
-    "address": "江宁区胜太路68号408"
+    "phone": "18912345678",
+    "merchants": [
+      { 	
+        "merchantID" : "e20dccdf039b3874",
+        "memberID" : "087442b616a1e8dc",
+        "merchantName" : "泛盈科技", 
+        "balance" : 40, 
+        "point" : 0, 
+        "level" : "会员"
+      }
+    ]
+  },
+  "receipt": {
+    "name": "顾客李四",
+    "phone": "13987654321",
+    "address": "",
   },
   "agent": {
     "id": "6d97c241f56a8873",
