@@ -67,7 +67,7 @@ deliver|外送
   "receipt": {
     "name": "顾客李四",
     "phone": "13987654321",
-    "address": "",
+    "address": ""
   },
   "agent": {
     "id": "6d97c241f56a8873",
