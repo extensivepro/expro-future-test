@@ -71,7 +71,7 @@
 * 业主身份证缺失
 * `email`和`telephone`同时为空
 * `code`已经存在
-* `weixin.originID` - duplicated originID of weixin
+* `weixin.originID` - exist originID of weixin
 
 ### `401` - 权限不够
 ### `409` - 请求冲突(暂时：400)
@@ -104,7 +104,7 @@
 ### `400` - 请求参数错误
 * `telephone`或`email`格式错误
 * 更换业主时，新业主身份证缺失
-* `weixin.originID` - duplicated originID of weixin
+* `weixin.originID` - exist originID of weixin
 
 ### `401` - 权限不够
 ### `409` - 请求冲突(暂时：400)
