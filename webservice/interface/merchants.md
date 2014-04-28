@@ -85,7 +85,10 @@
   "weixin": {
     "originID":"gh_af0c5d6c7b66"  
   },
-  "logo":"abc123 is LogoID"
+  "logo":{
+    id:"abc123 is LogoID"
+    name: "file name"
+  },
   "address": "江宁区胜太路",
   "telephone": "02551234567",
   "zip": "211521",
