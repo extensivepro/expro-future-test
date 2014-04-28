@@ -9,6 +9,9 @@
   "code": "10000",
   "name": "卡罗酒吧",
   "fullName": "南京卡罗酒吧",
+  "weixin": {
+    "originID":"gh_af0c5d6c7b66"  
+  },
   "telephone": "02551234567",
   "email": "kaluojiuba@qq.com",
   "address": "江宁区胜太路",
@@ -37,6 +40,9 @@
   "code": "10000",
   "name": "卡罗酒吧",
   "fullName": "南京卡罗酒吧",
+  "weixin": {
+    "originID":"gh_af0c5d6c7b66"  
+  },
   "address": "江宁区胜太路",
   "telephone": "02551234567",
   "zip": "211521",
@@ -65,6 +71,7 @@
 * 业主身份证缺失
 * `email`和`telephone`同时为空
 * `code`已经存在
+* `weixin.originID` - duplicated originID of weixin
 
 ### `401` - 权限不够
 ### `409` - 请求冲突(暂时：400)
@@ -75,6 +82,9 @@
 ### PUT /merchants/:id
 ```json
 {
+  "weixin": {
+    "originID":"gh_af0c5d6c7b66"  
+  },
   "address": "江宁区胜太路",
   "telephone": "02551234567",
   "zip": "211521",
@@ -94,6 +104,7 @@
 ### `400` - 请求参数错误
 * `telephone`或`email`格式错误
 * 更换业主时，新业主身份证缺失
+* `weixin.originID` - duplicated originID of weixin
 
 ### `401` - 权限不够
 ### `409` - 请求冲突(暂时：400)
