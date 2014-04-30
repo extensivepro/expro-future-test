@@ -36,7 +36,7 @@
 * `createdAt`
 
 ### 默认项目
-* `status` - "open" 。(共3种状态`open`, `suspend`, `closed`)
+* `status` - "open" 。(共4种状态`open`, `suspend`, `closed`, `removed`)
 
 ### 备注
 * `code` - 商户内唯一
