@@ -21,7 +21,7 @@ deliver|外送|下单后直接进入到executed打印出品单
 
 结算项目|说明
 -----|-----    
-类型| 现金、微信    
+类型| cash、weixin    
 状态| paid、unpaid 
 
 ***
@@ -33,7 +33,15 @@ deliver|外送|下单后直接进入到executed打印出品单
   "createdAt": 1387529885,
   "updateAt": 1387529885,
   "status": "placed",
+  "payment": {
+    "type": "weixin",
+    "status": "unpaid"
+  },
   "memo": [
+    {
+      "name": "门店",
+      "createdAt": 1387529885
+    },
     {
       "name": "顾客张三",
       "createdAt": 1387529885,
@@ -46,11 +54,21 @@ deliver|外送|下单后直接进入到executed打印出品单
       "item": {
         "id": "221f47e56134f82c",
         "name": "盖浇饭",
-        "price": 1600
+        "price": 1620
       },
       "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
-      "dealPrice": 1600,
+      "dealPrice": 1620,
       "quantity": 1
+    },
+    {
+      "item": {
+        "id": "221f47e56134f82d",
+        "name": "拉面",
+        "price": 1000
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC89",
+      "dealPrice": 1000,
+      "quantity": 2
     }
   ],
   "customer": {
@@ -58,27 +76,25 @@ deliver|外送|下单后直接进入到executed打印出品单
     "name": "顾客张三",
     "phone": "18912345678",
     "merchants": [
-      { 	
-        "merchantID" : "e20dccdf039b3874",
-        "memberID" : "087442b616a1e8dc",
-        "merchantName" : "泛盈科技", 
-        "balance" : 40, 
-        "point" : 0, 
-        "level" : "会员"
+      {
+        "merchantID": "e20dccdf039b3874",
+        "memberID": "087442b616a1e8dc",
+        "merchantName": "泛盈科技",
+        "balance": 40,
+        "point": 0,
+        "level": "会员"
       }
     ]
   },
-  "receipt": {
-    "name": "顾客李四",
-    "phone": "13987654321",
-    "address": ""
+  "openRes": {
+    "code": "16"
   },
   "agent": {
     "id": "6d97c241f56a8873",
     "name": "泛盈微信订餐"
   },
   "shop": {
-    "id": "2834910281d26a76",
+    "id": "903d6f6ce857a9eb",
     "name": "泛盈总店",
     "address": "胜太路68号3层",
     "phone": "025-58679066"
@@ -94,7 +110,15 @@ deliver|外送|下单后直接进入到executed打印出品单
   "createdAt": 1387529885,
   "updateAt": 1387529885,
   "status": "placed",
+  "payment": {
+    "type": "weixin",
+    "status": "unpaid"
+  },
   "memo": [
+    {
+      "name": "门店",
+      "createdAt": 1387529885
+    },
     {
       "name": "顾客张三",
       "createdAt": 1387529885,
@@ -102,32 +126,52 @@ deliver|外送|下单后直接进入到executed打印出品单
     }
   ],
   "type": "booking",
-  "fee": 1600,
   "items": [
     {
       "item": {
         "id": "221f47e56134f82c",
         "name": "盖浇饭",
-        "price": 1600
+        "price": 1620
       },
       "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
-      "dealPrice": 1600,
+      "dealPrice": 1620,
       "quantity": 1
+    },
+    {
+      "item": {
+        "id": "221f47e56134f82d",
+        "name": "拉面",
+        "price": 1000
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC89",
+      "dealPrice": 1000,
+      "quantity": 2
     }
   ],
-  "quantity": 1,
-  "sequenceNumber": 1,
   "customer": {
     "id": "6d97c241f56a8873",
     "name": "顾客张三",
-    "address": "江宁区胜太路68号408"
+    "phone": "18912345678",
+    "merchants": [
+      {
+        "merchantID": "e20dccdf039b3874",
+        "memberID": "087442b616a1e8dc",
+        "merchantName": "泛盈科技",
+        "balance": 40,
+        "point": 0,
+        "level": "会员"
+      }
+    ]
+  },
+  "openRes": {
+    "code": "16"
   },
   "agent": {
     "id": "6d97c241f56a8873",
     "name": "泛盈微信订餐"
   },
   "shop": {
-    "id": "2834910281d26a76",
+    "id": "903d6f6ce857a9eb",
     "name": "泛盈总店",
     "address": "胜太路68号3层",
     "phone": "025-58679066"
