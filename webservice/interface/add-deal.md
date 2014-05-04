@@ -41,6 +41,12 @@
         "accountID": "454545467a4e45",
       }
     },
+    "onlineSettlement": {
+      "serialNumber": 1000068,
+      "amount": 5000,
+      "payType": "weixin",
+      "status": "closed"
+    },
     "memo": "",
     "createdAt": 1366351844618
   },
