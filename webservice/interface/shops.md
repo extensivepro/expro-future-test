@@ -18,7 +18,8 @@
       "type": "table",
       "serviceability": 1,
       "code": "16",
-      "codename": "桌号"
+      "codename": "桌号",
+      "sceneID": 1016
     }
   ],
   "location": {
