@@ -61,7 +61,8 @@
       "code": "16",
       "codename": "桌号",
       "sceneID": 1016,
-      "ticket": "gQG28DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL0FuWC1DNmZuVEhvMVp4NDNMRnNRAAIEesLvUQMECAcAAA=="
+      "ticket": "gQG28DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL0FuWC1DNmZuVEhvMVp4NDNMRnNRAAIEesLvUQMECAcAAA==",
+      "originID": "gh_af0c5d6c7b66"
     }
   ],
   "location": {
