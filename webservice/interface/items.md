@@ -58,7 +58,7 @@
 ### `409` - 请求冲突(目前：400)
 ***
 
-## owner雇员查询商品
+## 查询商品
 ## 请求
 ### GET /items
 ### 查询条件
@@ -69,25 +69,33 @@
 * `status` - 商品状态；示例：?status=sale
 * `skip` - 查询起始位置；示例：?skip=0
 * `limit` - 查询长度；示例：?limit=20
+* `merchantID` - 商品所属商户；？merchantID=234a3cd3c86b2a29
+* `tags` - 商品所包含的标签；?{tags:{$in:["phone"]}}
 
 ### 默认项目
 * `skip` - 0
-* `limit` - 20
+* `limit` - 10
 
 ## 响应
 ### `200` - 成功返回
 ```json
-[{
-  "id": "1545a4548d4848c848e",
-  "merchantID": "15425a25c2d25e2",
-  "code": "123456",
-  "mnemonicCode": "12-23",
-  "name": "老北京鸡肉卷",
-  "desc": "源自于老北京的经典美食",
-  "price": 500,
-  "status": "sale",
-  "createdAt": 1365408771288
-}]
+[
+  {
+    "tags": [
+      "phone"
+    ],
+    "merchantID": "c82e1197884d8806",
+    "code": "10002000",
+    "mnemonicCode": "1020",
+    "name": "iPhone 5",
+    "price": 450000,
+    "desc": "演示商品2",
+    "status": "sale",
+    "createdAt": 1371570826,
+    "model": "港行官方标配黑色三网通行",
+    "id": "234a3cd3c86b2a29"
+  }
+]
 ```
 ### `204` - 无内容(目前：200)
 ### `304` - not modified(目前：200)
