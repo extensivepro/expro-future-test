@@ -46,8 +46,8 @@
 * `level` - `"会员"`
 
 ### 备注
-* 当`shop`信息不存在时，认为会员为商户级别会员
-* 当`shop`信息存在时，认为会员为商店级别会员
+~~* 当`shop`信息不存在时，认为会员为商户级别会员~~
+~~* 当`shop`信息存在时，认为会员为商店级别会员~~
 * `point` - 初始值为： 0
 * `createdAt`的时间格式一律为整型值的秒数
 
@@ -55,13 +55,12 @@
 ### `200` - 新增成功
 ```json
 {
-  "id": "2512a52c535e51",
-  "name": "张三",
-  "code": "23012584",
-  "male": true,
-  "phone": "15154588756",
-  "email": "hello@qq.com",
-  "idcard": "587452145874569852",
+  "_id": "1a0714826e347a64",
+  "name": "张飞",
+  "code": "100002",
+  "email": "caocao@fankahui.com",
+  "phone": "18912345678",
+  "idcard": "320103197912162012",
   "deliveryAddress": [
     {
       "address": "新街口2号",
@@ -69,30 +68,36 @@
       "phone": "18912345678"
     }
   ],
-  "userID": "2512a52c535e51",
-  "shop": {
-    "shopID": "251235a2c535e51",
-    "name": "北京烤鸭店江宁区分店",
-    "address": "江宁区胜太路99号",
-    "telephone": "02554785214"
-  },
   "merchant": {
-    "merchantID": "251235a2c535e51",
-    "name": "烤鸭店",
-    "fullName": "北京烤鸭店"
+    "merchantID": "c82e1197884d8806",
+    "name": "泛盈科技",
+    "fullName": "泛盈信息科技有限公司",
+    "weixin": {
+      "originID": "gh_af0c5d6c7b66"
+    }
   },
-  "postPoint": 0,
-  "postTotalPoint": 0,
+  "postPoint": 5000,
+  "postTotalPoint": 10000,
   "level": "会员",
   "status": "active",
-  "sinceAt": 1366444157013,
-  "dueAt": 1366444159013,
-  "createdAt": 1366444157013
+  "sinceAt": 1371570826,
+  "dueAt": 1403106826,
+  "createdAt": 1371570826,
+  "account": {
+    "id": "e55825da3bd8d8c3",
+    "name": "曹操",
+    "balance": 10000
+  },
+  "registerShopID": "903d6f6ce857a9eb",
+  "weixin": {
+    "openID": "o6_bmjrPTlm6_3sgVt7hM77kkOPf08M"
+  },
+  "shop": {}
 }
 ```
 ### `400` - 请求参数错误
-### `401` - 权限不够
-* 仅雇员有权限
+~~### `401` - 权限不够~~
+~~* 仅雇员有权限~~
 
 ### `409` - 请求冲突(暂时：400)
 ***
