@@ -71,6 +71,7 @@
 * `limit` - 查询长度；示例：?limit=20
 * `merchantID` - 商品所属商户；？merchantID=234a3cd3c86b2a29
 * `tags` - 商品所包含的标签；?{tags:{$in:["phone"]}}
+* `withall` - 当是商品所在商户的用户查询的时候，将返回商品的平均成本itemSkus数据。
 
 ### 默认项目
 * `skip` - 0
@@ -146,7 +147,7 @@
 ### `409` - 请求冲突(目前：400)
 ***
 
-## owner雇员上架商品
+## owner上架商品
 ## 请求
 ### PUT /items/:id
 ```json
