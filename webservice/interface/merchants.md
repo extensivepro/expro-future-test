@@ -86,9 +86,9 @@
 }
 ```
 #### 备注
-`shopIDs` - 所属商店的ID集合  
-`itemTags` - 商品的标签集合  
-`pointRule` - 积分规则，有定额和比例奖励两张类型  
+* `shopIDs` - 所属商店的ID集合  
+* `itemTags` - 商品的标签集合  
+* `pointRule` - 积分规则，有定额和比例奖励两张类型  
   - `.newMember` - 新会员积分奖励，定额积分奖励  
   - `.comsumption` - 消费将来，然消费额兑换比例计算  
   - `.referrer` - 推荐积分奖励，定额奖励  
