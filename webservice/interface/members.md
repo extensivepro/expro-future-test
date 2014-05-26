@@ -118,53 +118,16 @@
 * `skip` - 查询起始位置；示例：?skip=0
 * `limit` - 查询长度；示例：?limit=20
 * `id` - 根据`id`进行查询；示例：/32445a458b45e
+* `oauthCode` - 根据微信oauth的code查询会员信息；例如：?oauthCode=123
 
 #### 注：当用id查询时，得到的是单个json而非json数组，且查询不到时返回404
 
 ### 默认项目
 * `skip` - 0
-* `limit` - 20
+* `limit` - 10
 
 ## 响应
-### `200` - 请求成功(非`id`查询)
-```json
-[{
-  "id": "2512a52c535e51",
-  "name": "张三",
-  "code": "23012584",
-  "male": true,
-  "phone": "15154588756",
-  "email": "hello@qq.com",
-  "idcard": "587452145874569852",
-  "deliveryAddress": [
-    {
-      "address": "新街口2号",
-      "recipient": "李四",
-      "phone": "18912345678"
-    }
-  ],
-  "userID": "2512a52c535e51",
-  "shop": {
-    "shopID": "251235a2c535e51",
-    "name": "北京烤鸭店江宁区分店",
-    "address": "江宁区胜太路99号",
-    "telephone": "02554785214"
-  },
-  "merchant": {
-    "merchantID": "251235a2c535e51",
-    "name": "烤鸭店",
-    "fullName": "北京烤鸭店"
-  },
-  "postPoint": 0,
-  "postTotalPoint": 0,
-  "level": "会员",
-  "status": "active",
-  "sinceAt": 1366444157013,
-  "dueAt": 1366444159013,
-  "createdAt": 1366444157013
-}]
-```
-### `200` - 请求成功(`id`查询)
+### `200` - 请求成功(`id`查询, 非`id`查询返回数组)
 ```json
 {
   "id": "2512a52c535e51",
@@ -190,6 +153,9 @@
   },
   "merchant": {
     "merchantID": "251235a2c535e51",
+    "weixin":{
+      "originID": "gh_af0c5d6c7b66"
+    }
     "name": "烤鸭店",
     "fullName": "北京烤鸭店"
   },
@@ -199,6 +165,9 @@
   "status": "active",
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013,
+  "weixin": {
+    "openID": "o6_bmjrPTlm6_3sgVt7hM77kkOPf08M"
+  },
   "createdAt": 1366444157013
 }
 ```
