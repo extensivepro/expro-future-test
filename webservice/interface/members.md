@@ -184,50 +184,8 @@
 * `code` - 根据微信oauth的code查询会员信息；例如：?code=123
 
 ## 响应
-### `200` - 请求成功
-```json
-{
-  "id": "2512a52c535e51",
-  "name": "张三",
-  "code": "23012584",
-  "male": true,
-  "phone": "15154588756",
-  "email": "hello@qq.com",
-  "idcard": "587452145874569852",
-  "deliveryAddress": [
-    {
-      "address": "新街口2号",
-      "recipient": "李四",
-      "phone": "18912345678"
-    }
-  ],
-  "userID": "2512a52c535e51",
-  "shop": {
-    "shopID": "251235a2c535e51",
-    "name": "北京烤鸭店江宁区分店",
-    "address": "江宁区胜太路99号",
-    "telephone": "02554785214"
-  },
-  "merchant": {
-    "merchantID": "251235a2c535e51",
-    "weixin":{
-      "originID": "gh_af0c5d6c7b66"
-    }
-    "name": "烤鸭店",
-    "fullName": "北京烤鸭店"
-  },
-  "postPoint": 0,
-  "postTotalPoint": 0,
-  "level": "会员",
-  "status": "active",
-  "sinceAt": 1366444157013,
-  "dueAt": 1366444159013,
-  "weixin": {
-    "openID": "o6_bmjrPTlm6_3sgVt7hM77kkOPf08M"
-  },
-  "createdAt": 1366444157013
-}
-```
+参考[查询会员-响应](#%E5%93%8D%E5%BA%94-1)
+
 
 ## 雇员更新会员信息
 ## 请求
