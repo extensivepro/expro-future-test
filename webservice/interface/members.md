@@ -199,10 +199,18 @@
   "idcard": "587452145874569852",
   "level": "会员",
   "status": "active",
+  "deliveryAddress": [
+    {
+      "address": "新街口2号",
+      "recipient": "李四",
+      "phone": "18912345678"
+    }
+  ],
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013
 }
 ```
+
 #### 备注
 `postPoint` - 不可以由外部更新
 `postTotalPoint` - 不可以由外部更新
@@ -216,6 +224,7 @@
 ## 微信OAuth更新会员信息
 ## 请求
 ### POST /wxoauth/:code
+```json
 {
   "name": "张三",
   "male": true,
@@ -234,6 +243,8 @@
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013
 }
+```
+
 ### 备注
 * `code` - 根据微信oauth的code验证会员权限；例如：?code=123
 
