@@ -36,35 +36,62 @@
 ### `201` - 添加成功(暂时：200)
 ```json
 {
-  "id": "4545a454e454c4d45",
-  "code": "10000",
-  "name": "卡罗酒吧",
-  "fullName": "南京卡罗酒吧",
-  "weixin": {
-    "originID":"gh_af0c5d6c7b66"  
-  },
-  "address": "江宁区胜太路",
-  "telephone": "02551234567",
-  "zip": "211521",
-  "email": "kaluojiuba@qq.com",
+  "address": "jl",
+  "createdAt": 1386235335,
+  "email": "",
+  "fullName": "泛盈信息科技有限公司",
+  "newestDeviceCode": 100001,
+  "name": "泛盈科技",
   "owner": {
-    "id": "e8a69acd47baf94c",
-    "displayName": "张业主",
-    "phone": "1891234578",
-    "idcard": "320103197901011234",
+    "createdAt": 1386235335,
+    "displayName": "泛盈科技运营",
+    "email": "owner@fankahui.com",
+    "id": "af968c00fcaf8b0a",
+    "idcard": "432828198307052525",
     "male": true,
-    "birthday": "19790101",
-    "email": "18912345678@189.cn",
+    "name": "泛盈科技运营",
+    "phone": "18912345678",
+    "roles": [
+      "user"
+    ],
+    "username": "18912345678"
+  },
+  "shopIDs": [
+    "903d6f6ce857a9eb"
+  ],
+  "pointRule": {
+    "newMember": {
+      "type": "fixed",
+      "amount": "100"
+    },
+    "consumption": {
+      "type": "ratio",
+      "ratio": "1"
+    },
+    "referrer": {
+      "type": "fixed",
+      "amount": "100"
+    }
+  },
+  "weixin": {
+    "originID": "gh_af0c5d6c7b65",
+    "devToken": {
+      "appid": "wxdff210e6548a2eab",
+      "secret": "66333b7b129109dc145d5b16330f1c9a"
+    }
   },
   "status": "open",
-  "shopIDs": [],
-  "itemTags": [],
-  "createdAt": "1365402743500"
+  "telephone": "02586861234",
+  "zip": ""
 }
 ```
 #### 备注
-`shopIDs` - 所属商店的ID集合
-`itemTags` - 商品的标签集合
+* `shopIDs` - 所属商店的ID集合  
+* `itemTags` - 商品的标签集合  
+* `pointRule` - 积分规则，有定额和比例奖励两张类型  
+  - `.newMember` - 新会员积分奖励，定额积分奖励  
+  - `.comsumption` - 消费将来，然消费额兑换比例计算  
+  - `.referrer` - 推荐积分奖励，定额奖励  
 
 ### `400` - 请求参数错误
 * 店铺重名

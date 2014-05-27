@@ -102,7 +102,7 @@
 ### `409` - 请求冲突(暂时：400)
 ***
 
-## 业主、雇员、会员查询会员
+## 查询会员
 ## 请求
 ### GET /members
 ### 查询条件
@@ -123,48 +123,10 @@
 
 ### 默认项目
 * `skip` - 0
-* `limit` - 20
+* `limit` - 10
 
 ## 响应
-### `200` - 请求成功(非`id`查询)
-```json
-[{
-  "id": "2512a52c535e51",
-  "name": "张三",
-  "code": "23012584",
-  "male": true,
-  "phone": "15154588756",
-  "email": "hello@qq.com",
-  "idcard": "587452145874569852",
-  "deliveryAddress": [
-    {
-      "address": "新街口2号",
-      "recipient": "李四",
-      "phone": "18912345678"
-    }
-  ],
-  "userID": "2512a52c535e51",
-  "shop": {
-    "shopID": "251235a2c535e51",
-    "name": "北京烤鸭店江宁区分店",
-    "address": "江宁区胜太路99号",
-    "telephone": "02554785214"
-  },
-  "merchant": {
-    "merchantID": "251235a2c535e51",
-    "name": "烤鸭店",
-    "fullName": "北京烤鸭店"
-  },
-  "postPoint": 0,
-  "postTotalPoint": 0,
-  "level": "会员",
-  "status": "active",
-  "sinceAt": 1366444157013,
-  "dueAt": 1366444159013,
-  "createdAt": 1366444157013
-}]
-```
-### `200` - 请求成功(`id`查询)
+### `200` - 请求成功(`id`查询, 非`id`查询返回数组)
 ```json
 {
   "id": "2512a52c535e51",
@@ -190,6 +152,9 @@
   },
   "merchant": {
     "merchantID": "251235a2c535e51",
+    "weixin":{
+      "originID": "gh_af0c5d6c7b66"
+    }
     "name": "烤鸭店",
     "fullName": "北京烤鸭店"
   },
@@ -199,6 +164,9 @@
   "status": "active",
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013,
+  "weixin": {
+    "openID": "o6_bmjrPTlm6_3sgVt7hM77kkOPf08M"
+  },
   "createdAt": 1366444157013
 }
 ```
@@ -209,7 +177,18 @@
 ### `409` - 请求冲突(暂时：400)
 ***
 
-## 雇员更新会员信息
+## 微信OAuth获取会员信息
+## 请求
+### GET /wxoauth
+### 查询条件
+* `code` - 根据微信oauth的code查询会员信息；例如：?code=123
+* `merchantID` - 商户ID，用来定位商户的appid和secret；
+
+## 响应
+参考[查询会员-响应](#%E5%93%8D%E5%BA%94-1)
+
+
+## 更新会员信息
 ## 请求
 ### PUT /members/:id
 ```json
@@ -221,10 +200,18 @@
   "idcard": "587452145874569852",
   "level": "会员",
   "status": "active",
+  "deliveryAddress": [
+    {
+      "address": "新街口2号",
+      "recipient": "李四",
+      "phone": "18912345678"
+    }
+  ],
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013
 }
 ```
+
 #### 备注
 `postPoint` - 不可以由外部更新
 `postTotalPoint` - 不可以由外部更新
@@ -233,6 +220,40 @@
 ### `200` - 更新成功
 ### `400` - 请求参数错误
 ### `401` - 权限不够
-* 仅雇员有权限
 
-### `409` - 请求冲突(暂时：400)
+
+## 微信OAuth更新会员信息
+## 请求
+### POST /wxoauth/:code
+```json
+{
+  "name": "张三",
+  "male": true,
+  "phone": "15154588756",
+  "email": "hello@qq.com",
+  "idcard": "587452145874569852",
+  "level": "会员",
+  "status": "active",
+  "deliveryAddress": [
+    {
+      "address": "新街口2号",
+      "recipient": "李四",
+      "phone": "18912345678"
+    }
+  ],
+  "merchant": {
+    "merchantID": "c82e1197884d8806"
+  }
+  "sinceAt": 1366444157013,
+  "dueAt": 1366444159013
+}
+```
+
+### 备注
+* `code` - 根据微信oauth的code验证会员权限；例如：?code=123
+* `body.merchant.merchantID` - 商户的ID，必须包含；用来定位商户的appid和secret。
+
+## 响应
+### `200` - 更新成功
+### `400` - 请求参数错误
+### `401` - 权限不够
