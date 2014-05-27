@@ -227,6 +227,7 @@
 ### POST /wxoauth/:code
 ```json
 {
+  "id": "123abc",
   "name": "张三",
   "male": true,
   "phone": "15154588756",
@@ -251,6 +252,7 @@
 
 ### 备注
 * `code` - 根据微信oauth的code验证会员权限；例如：?code=123
+* `id` - 必须包含会员的id，用于更新会员信息；
 * `body.merchant.merchantID` - 商户的ID，必须包含；用来定位商户的appid和secret。
 
 ## 响应
