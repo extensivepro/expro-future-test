@@ -241,9 +241,6 @@
       "phone": "18912345678"
     }
   ],
-  "merchant": {
-    "merchantID": "c82e1197884d8806"
-  },
   "sinceAt": 1366444157013,
   "dueAt": 1366444159013
 }
@@ -251,7 +248,7 @@
 
 ### 备注
 * `code` - 根据微信oauth的code验证会员权限；例如：?code=123
-* `body.merchant.merchantID` - 商户的ID，必须包含；用来定位商户的appid和secret。
+* `merchantID` - 商户的ID，必须包含；用来定位商户的appid和secret。例如?merchantID=abc
 
 ## 响应
 ### `200` - 更新成功
