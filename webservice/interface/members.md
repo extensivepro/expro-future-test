@@ -118,6 +118,7 @@
 * `skip` - 查询起始位置；示例：?skip=0
 * `limit` - 查询长度；示例：?limit=20
 * `id` - 根据`id`进行查询；示例：/32445a458b45e
+* `weixin.refresh_token` - 根据weixin的refresh_token查询；
 
 #### 注：当用id查询时，得到的是单个json而非json数组，且查询不到时返回404
 
@@ -190,7 +191,7 @@
 
 ## 更新会员信息
 ## 请求
-### PUT /members/:id
+### PUT /members/:id?weixin.refresh_token=abc123
 ```json
 {
   "name": "张三",
@@ -213,42 +214,9 @@
 ```
 
 #### 备注
-`postPoint` - 不可以由外部更新
-`postTotalPoint` - 不可以由外部更新
-
-## 响应
-### `200` - 更新成功
-### `400` - 请求参数错误
-### `401` - 权限不够
-
-
-## 微信OAuth更新会员信息
-## 请求
-### POST /wxoauth/:code
-```json
-{
-  "name": "张三",
-  "male": true,
-  "phone": "15154588756",
-  "email": "hello@qq.com",
-  "idcard": "587452145874569852",
-  "level": "会员",
-  "status": "active",
-  "deliveryAddress": [
-    {
-      "address": "新街口2号",
-      "recipient": "李四",
-      "phone": "18912345678"
-    }
-  ],
-  "sinceAt": 1366444157013,
-  "dueAt": 1366444159013
-}
-```
-
-### 备注
-* `code` - 根据微信oauth的code验证会员权限；例如：?code=123
-* `merchantID` - 商户的ID，必须包含；用来定位商户的appid和secret。例如?merchantID=abc
+* `postPoint` - 不可以由外部更新
+* `postTotalPoint` - 不可以由外部更新
+* `weixin.refresh_token` -  利用微信的token更新会员信息。
 
 ## 响应
 ### `200` - 更新成功
