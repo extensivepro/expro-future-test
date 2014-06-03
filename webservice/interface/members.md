@@ -50,6 +50,7 @@
 ~~* 当`shop`信息存在时，认为会员为商店级别会员~~
 * `point` - 初始值为： 0
 * `createdAt`的时间格式一律为整型值的秒数
+* `query.referrer` - 将推荐人的会员id放到querystring中，推荐人将获得推荐积分。 例如：?referre=abc123
 
 ## 响应
 ### `200` - 新增成功
