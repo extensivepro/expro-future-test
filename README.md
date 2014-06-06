@@ -10,3 +10,4 @@
   - [FAQ](expropos/faq.md)
 - 业务流程图
   - [扫码购物时序](https://projects.invisionapp.com/d/main#/console/292578/24696834/preview)
+  - [支付时序](https://projects.invisionapp.com/d/main#/console/292578/24588845/preview)
