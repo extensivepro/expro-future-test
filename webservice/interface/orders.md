@@ -337,7 +337,7 @@ deliver|外送|下单后直接进入到executed打印出品单
 ## 订单付款
 ### 请求
 ### PUT /orders/:id
-```
+```json
 {
   "payment": {
     "type": 'alipay',
@@ -356,7 +356,7 @@ deliver|外送|下单后直接进入到executed打印出品单
   * `prepay` - 储值支付
 
 ### 响应
-```
+```json
 {
   "agent": {
     "id": "6d97c241f56a8873",
