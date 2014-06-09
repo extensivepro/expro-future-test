@@ -180,17 +180,7 @@ deliver|外送|下单后直接进入到executed打印出品单
 ```
 ##### 备注
 * `status` - 订单状态
-
 * `type` - 订单类型
-
-* 当`payment`为
-
-```
-type: 'prepay',
-status: 'paid'
-```
-
-且`status`为`paid`时，则为一次储值交易，后台需根据order产生deal
 
 #### 400 - 参数错误
 #### 401 - 未登录
@@ -342,3 +332,25 @@ status: 'paid'
 #### 400 - 参数错误
 #### 401 - 未登录
 #### 403 - 权限错误
+
+
+## 订单付款
+### 请求
+### PUT /orders/:id
+```
+{
+  "payment": {
+    "type": 'alipay',
+    "status": 'paid'
+  }
+}
+```
+
+#### 备注
+* `sequenceNumber` - 订单号也做流水号，在更新订单付款状态前需要通关过sequenceNumber查询出具体的订单id
+* `payment.status` - 为`paid`时，后台需根据order产生deal
+* `payment.type` - 付款方式
+  * `weixin` - 微信支付
+  * `alipay` - 支付宝支付
+  * `cash` - 现金支付
+  * `prepay` - 储值支付
