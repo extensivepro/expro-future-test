@@ -249,14 +249,14 @@
 ## 响应
 ### `200` - 更新成功
 ### `400` - 请求参数错误
-* action, 'should have action'
-* member, 'should have member'
-* member.id, 'should have member id'
-* member.weixin, 'should have member with weixin'
-* member.weixin.refresh_token, 'should have member with weixin refresh token'
-* member.merchant, 'should have merchant'
-* member.merchant.merchantID, 'should have merchant id'
-* options, 'should have options'
-* options.phone, 'should have phone number'
+* action, `should have action`
+* member, `should have member`
+* member.id, `should have member id`
+* member.weixin, `should have member with weixin`
+* member.weixin.refresh_token, `should have member with weixin refresh token`
+* member.merchant, `should have merchant`
+* member.merchant.merchantID, `should have merchant id`
+* options, `should have options`
+* options.phone, `should have phone number`
 
 ### `401` - 权限不够
