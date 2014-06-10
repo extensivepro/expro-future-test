@@ -252,6 +252,7 @@
 * action, `should have action`
 * member, `should have member`
 * member.id, `should have member id`
+  * `member already paired` - 当通过options.phone找到的member就是这个会员的时候。
 * member.weixin, `should have member with weixin`
 * member.weixin.refresh_token, `should have member with weixin refresh token`
 * member.merchant, `should have merchant`
