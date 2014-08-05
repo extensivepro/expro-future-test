@@ -180,17 +180,7 @@ deliver|外送|下单后直接进入到executed打印出品单
 ```
 ##### 备注
 * `status` - 订单状态
-
 * `type` - 订单类型
-
-* 当`payment`为
-
-```
-type: 'prepay',
-status: 'paid'
-```
-
-且`status`为`paid`时，则为一次储值交易，后台需根据order产生deal
 
 #### 400 - 参数错误
 #### 401 - 未登录
@@ -342,3 +332,212 @@ status: 'paid'
 #### 400 - 参数错误
 #### 401 - 未登录
 #### 403 - 权限错误
+
+
+## 订单付款
+### 请求
+### PUT /orders/:id
+```json
+{
+  "payment": {
+    "type": 'alipay',
+    "status": 'paid'
+  }
+}
+```
+
+#### 备注
+* `sequenceNumber` - 订单号也做流水号，在更新订单付款状态前需要通关过sequenceNumber查询出具体的订单id
+* `payment.status` - 为`paid`时，后台需根据order产生deal
+* `payment.type` - 付款方式
+  * `weixin` - 微信支付
+  * `alipay` - 支付宝支付
+  * `cash` - 现金支付
+  * `prepay` - 储值支付
+
+### 响应
+```json
+{
+  "agent": {
+    "id": "6d97c241f56a8873",
+    "name": "泛盈微信订餐"
+  },
+  "createdAt": 1387529885,
+  "customer": {
+    "account": {
+      "balance": 20000,
+      "updateAt": 1393210578.764,
+      "id": "e55825da3bd8d8c3"
+    },
+    "code": "100001",
+    "createdAt": -57261283574,
+    "dueAt": 1403106826,
+    "email": "caocao@fankahui.com",
+    "level": "会员",
+    "merchant": {
+      "merchantID": "c82e1197884d8806",
+      "name": "泛盈科技",
+      "fullName": "泛盈信息科技有限公司"
+    },
+    "name": "曹操",
+    "phone": "18912345678",
+    "point": 0,
+    "postPoint": 5000,
+    "postTotalPoint": 10000,
+    "registerShopID": "903d6f6ce857a9eb",
+    "shop": {},
+    "sinceAt": 1371570826,
+    "status": "active",
+    "weixin": {
+      "openID": "o6_bmjrPTlm6_3sgVt7hM77kkOPf08M",
+      "nickname": "张三"
+    },
+    "updateAt": 1393210578.813,
+    "id": "9a0714826e347a64"
+  },
+  "deal": {
+    "id": "759abcac0d96292b",
+    "bill": {
+      "id": "4dab8987361ff9dc"
+    }
+  },
+  "fee": 3620,
+  "items": [
+    {
+      "item": {
+        "id": "221f47e56134f82e",
+        "name": "黑咖啡",
+        "price": 1620
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC88",
+      "dealPrice": 1620,
+      "quantity": 1
+    },
+    {
+      "item": {
+        "id": "221f47e56134f82f",
+        "name": "牛奶",
+        "price": 1000
+      },
+      "id": "E7BC77BA-61CD-47EF-8639-321E760BBC89",
+      "dealPrice": 1000,
+      "quantity": 2
+    }
+  ],
+  "memo": [
+    {
+      "name": "门店",
+      "createdAt": 1387529885
+    },
+    {
+      "name": "顾客张三",
+      "createdAt": 1387529885,
+      "message": "提交了订单，不要加辣椒"
+    }
+  ],
+  "payment": {
+    "type": "alipay",
+    "status": "paid"
+  },
+  "quantity": 3,
+  "receipt": {
+    "name": "顾客张三",
+    "phone": "13987654321",
+    "address": "未提供"
+  },
+  "sequenceNumber": 1402304633001,
+  "shop": {
+    "code": "10011",
+    "createdAt": 1386235335,
+    "location": {
+      "latitude": 23.137466,
+      "longitude": 113.352425,
+      "precision": 119.38504
+    },
+    "merchantID": "c82e1197884d8806",
+    "name": "总店",
+    "telephone": "02558679066",
+    "address": "江苏省南京市江宁开发区胜太路68号303",
+    "openRes": [
+      {
+        "name": "桌子",
+        "type": "table",
+        "serviceability": 1,
+        "code": "16",
+        "codename": "桌号",
+        "sceneID": 1016,
+        "ticket": "gQGV7zoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3gwd1JpLVRsMzNlbWl4b0dfV0RlAAIE8FlnUwMEAAAAAA==",
+        "originID": "gh_af0c5d6c7b60"
+      },
+      {
+        "name": "桌子",
+        "type": "table",
+        "serviceability": 2,
+        "code": "18",
+        "codename": "桌号"
+      }
+    ],
+    "printers": [
+      "000000007985f65b"
+    ],
+    "status": "open",
+    "updateAt": 1398058924.049,
+    "id": "903d6f6ce857a9eb",
+    "merchant": {
+      "address": "jl",
+      "createdAt": 1386235335,
+      "email": "",
+      "fullName": "泛盈信息科技有限公司",
+      "name": "泛盈科技",
+      "newestDeviceCode": 100001,
+      "owner": {
+        "name": "新业主",
+        "displayName": "泛盈科技业主",
+        "idcard": "432828198307052525",
+        "phone": "18912345678",
+        "email": "owner@fankahui.com",
+        "male": true,
+        "createdAt": 1386235335,
+        "username": "18912345678",
+        "roles": [
+          "user"
+        ],
+        "id": "af968c00fcaf8b0a"
+      },
+      "shopIDs": [
+        "903d6f6ce857a9eb"
+      ],
+      "pointRule": {
+        "newMember": {
+          "type": "fixed",
+          "amount": "200"
+        },
+        "consumption": {
+          "type": "ratio",
+          "ratio": "1"
+        },
+        "referrer": {
+          "type": "fixed",
+          "amount": "300"
+        }
+      },
+      "weixin": {
+        "originID": "gh_af0c5d6c7b60",
+        "devToken": {
+          "appid": "wxdff210e6548a2eab",
+          "secret": "66333b7b129109dc145d5b16330f1c9a"
+        }
+      },
+      "status": "open",
+      "telephone": "02586861234",
+      "zip": "",
+      "id": "c82e1197884d8806"
+    },
+    "sequenceNumber": 0
+  },
+  "status": "paid",
+  "type": "deliver",
+  "updateAt": 1402304635,
+  "id": "e334b788339cf855"
+}
+```

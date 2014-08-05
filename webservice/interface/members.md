@@ -50,6 +50,7 @@
 ~~* 当`shop`信息存在时，认为会员为商店级别会员~~
 * `point` - 初始值为： 0
 * `createdAt`的时间格式一律为整型值的秒数
+* `query.referrer` - 将推荐人的会员id放到querystring中，推荐人将获得推荐积分。 例如：?referre=abc123
 
 ## 响应
 ### `200` - 新增成功
@@ -248,14 +249,15 @@
 ## 响应
 ### `200` - 更新成功
 ### `400` - 请求参数错误
-* action, 'should have action'
-* member, 'should have member'
-* member.id, 'should have member id'
-* member.weixin, 'should have member with weixin'
-* member.weixin.refresh_token, 'should have member with weixin refresh token'
-* member.merchant, 'should have merchant'
-* member.merchant.merchantID, 'should have merchant id'
-* options, 'should have options'
-* options.phone, 'should have phone number'
+* action, `should have action`
+* member, `should have member`
+* member.id, `should have member id`
+  * `member already paired` - 当通过options.phone找到的member就是这个会员的时候。
+* member.weixin, `should have member with weixin`
+* member.weixin.refresh_token, `should have member with weixin refresh token`
+* member.merchant, `should have merchant`
+* member.merchant.merchantID, `should have merchant id`
+* options, `should have options`
+* options.phone, `should have phone number`
 
 ### `401` - 权限不够
