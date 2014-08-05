@@ -168,7 +168,7 @@
     "shopID": "2834910281d26a76",
     "id": "f649a6f4622a0aa6"
   },
-  "return": {
+  "returnDeal": {
     "id": "32445a458b45e",
     "shopID": "87245a458b45e",
     "dealID": "32445a458b45e",
